@@ -18,3 +18,8 @@ jobs:
         run: mvn test
       - name: Build the code
         run : mvn package
+      - name: Get the artifact and upload on github repo
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: /tmp/world.txt
